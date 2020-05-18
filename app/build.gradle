@@ -24,6 +24,34 @@ android {
   }
 }
 
+ext{
+  dUser = "dummy"
+  dKey = "dummy"
+}
+
+task createFile {
+  Properties properties = new Properties()
+  def propertyFile = project.rootProject.file('local.properties')
+  if (!propertyFile.exists()) {
+    print("property file does not exist will create")
+    propertyFile.createNewFile()
+  }
+
+  if (project.hasProperty("user")) {
+    dUser = user
+    dKey = key
+
+  }else{
+    print ("use dummy")
+  }
+  print(dUser+":"+dKey)
+  properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+  properties.setProperty("bintray.user",dUser)
+  properties.setProperty("bintray.apikey",dKey)
+  propertyFile.withWriter { properties.store(it, null) }
+}
+
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
   implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
