@@ -26,13 +26,13 @@ Show multi-colored Toast messages in android
 ```kotlin
      MaterialToast.show(this, MaterialToast.WARNING, "Warning", MaterialToast.LONG)
 ```
-### Error Toast :heartbeat:
+### Error Toast :heart:
 ![image](https://github.com/skyways/materialtoast/blob/master/art/error.jpg)
 
 ```kotlin
       MaterialToast.show(this, MaterialToast.ERROR, "Error", MaterialToast.LONG)
 ```
-## Default Toast  :heart:
+## Default Toast  :black_heart:
 ![image](https://github.com/skyways/materialtoast/blob/master/art/default.jpg)
 
 ```kotlin
