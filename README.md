@@ -1,4 +1,6 @@
 # :cyclone:MaterialToast
+
+[ ![Download](https://api.bintray.com/packages/skyways/MaterialToast/MaterialToast/images/download.svg?version=1.0) ](https://bintray.com/skyways/MaterialToast/MaterialToast/1.0/link)  [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=shield)](https://app.circleci.com/pipelines/github/skyways/MaterialToast/)
 Show multi-colored Toast messages in android
 
 **It supports the following Toasts**
@@ -23,6 +25,8 @@ Show multi-colored Toast messages in android
        MaterialToast.show(this, MaterialToast.SUCCESS, "success", MaterialToast.LONG)
 ```
 ### Warning Toast:yellow_heart:
+![image](https://github.com/skyways/materialtoast/blob/master/art/warning.jpg)
+
 ```kotlin
      MaterialToast.show(this, MaterialToast.WARNING, "Warning", MaterialToast.LONG)
 ```
@@ -40,3 +44,6 @@ Show multi-colored Toast messages in android
 ```
 
 ### Install through gradle
+```gradle
+implementation 'com.materialtoast:MaterialToast:1.0'
+```
